@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Snazzy Operator",
+    "workbench.preferredDarkColorTheme": "Snazzy Operator"
+
+    "editor.tokenColorCustomizations": {
+        "comments": "#6ff076",
+        "textMateRules": [
+            {
+                "scope": [
+                    "support.class.component.js.jsx",
+                    "entity.name.tag.js.jsx",
+                ],
+                "settings": {
+                    "foreground": "#FF5C57",
+                    "fontStyle": ""
+                }
+            }
+        ]
+
+    }
+}
