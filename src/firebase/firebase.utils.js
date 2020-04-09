@@ -11,7 +11,7 @@ const config = {
     messagingSenderId: "535301259328",
     appId: "1:535301259328:web:ecd4550afe3271e0b81fa5",
     measurementId: "G-Z5ZGQ5FDWS"
-}
+};
 
 firebase.initializeApp(config);
 
@@ -51,6 +51,24 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
     });
 
     return await batch.commit();
+}
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+    const transformedCollection = collections.docs.map(doc => {
+        const { title, items } = doc.data();
+
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: doc.id,
+            title,
+            items
+        }
+    })
+
+    return transformedCollection.reduce((accumulator, collection) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator;
+    }, {});
 }
 
 export const auth = firebase.auth();
