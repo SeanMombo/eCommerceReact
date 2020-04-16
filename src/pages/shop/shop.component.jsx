@@ -18,7 +18,7 @@ class ShopPage extends React.Component {
     }
     
     unsubscribeFromSnapshot = null;
-
+ 
     componentDidMount() {
         const { updateCollections } = this.props;
 
