@@ -25,25 +25,13 @@ class SignUp extends React.Component {
 
     const { displayName, email, password, confirmPassword } = this.state;
     const { signUpStart } = this.props;
+
+    if (password !== confirmPassword) {
+      alert("passwords don't match");
+      return;
+    }
     signUpStart(displayName, email, password, confirmPassword);
 
-    // try {
-    //   const { user } = await auth.createUserWithEmailAndPassword(
-    //     email,
-    //     password
-    //   );
-
-    //   await createUserProfileDocument(user, { displayName });
-
-    //   this.setState({
-    //     displayName: '',
-    //     email: '',
-    //     password: '',
-    //     confirmPassword: ''
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   handleChange = event => {

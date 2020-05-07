@@ -64,10 +64,6 @@ export function* signOut() {
 
 export function* signUp({payload: { displayName, email, password, confirmPassword }}) {
     try {
-        if (password !== confirmPassword) {
-            alert("passwords don't match");
-            return;
-          }
         const { user } = yield auth.createUserWithEmailAndPassword(email, password);
         yield put(signUpSuccess({ user, additionalData: { displayName } }));
 
