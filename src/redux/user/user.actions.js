@@ -6,8 +6,9 @@ export const signUpStart = signUpInfo => ({
     payload: signUpInfo
 })
 
-export const signUpSuccess = () => ({
-    type: UserActionTypes.SIGN_UP_SUCCESS
+export const signUpSuccess = ({ user, additionalData }) => ({
+    type: UserActionTypes.SIGN_UP_SUCCESS,
+    payload: {user, additionalData }
 })
 
 export const signUpFailure = (error) => ({
