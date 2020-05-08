@@ -8,7 +8,7 @@ import {
     signInFailure, 
     signOutSuccess, 
     signOutFailure,
-    signUpStart,
+    // signUpStart,
     signUpFailure,
     signUpSuccess
 
