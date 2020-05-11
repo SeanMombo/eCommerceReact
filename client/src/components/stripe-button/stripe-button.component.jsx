@@ -14,7 +14,7 @@ const StripeCheckoutButton = ({ price }) => {
         amount: priceForStripe,
         token
       }
-    }) 
+    }) //comment
       .then(response => {
         alert('Payment Succesful')
       })
@@ -24,9 +24,11 @@ const StripeCheckoutButton = ({ price }) => {
     })
   };
 
+
   return (
+
     <StripeCheckout
-      label='Pay Now'
+      label='Pay Now Pay now'
       name='CRWN Clothing Ltd.'
       billingAddress
       shippingAddress

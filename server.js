@@ -29,13 +29,13 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(port, error => {
     if (error) throw error;
     console.log('Server Running on port ' + port);
-})
+}) 
 
 //req holds info of request — includes all the info we're sending with the request
 //res holds info of response 
 app.post('/payment', (req, res) => {
     
-    const body = {
+    const body =  {  
         source: req.body.token.id,
         amount: req.body.amount,
         currency: 'usd'
