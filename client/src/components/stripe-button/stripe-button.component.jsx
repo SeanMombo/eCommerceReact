@@ -14,7 +14,7 @@ const StripeCheckoutButton = ({ price }) => {
         amount: priceForStripe,
         token
       }
-    })
+    }) 
       .then(response => {
         alert('Payment Succesful')
       })
