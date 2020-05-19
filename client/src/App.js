@@ -1,6 +1,6 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 
-import {Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -18,7 +18,7 @@ const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUp = lazy(() => import('./components/sign-in-and-sign-up/sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
-const App = ({ checkUserSession, currentUser}) => {
+const App = ({ checkUserSession, currentUser }) => {
 
   useEffect(() => {
     checkUserSession();
