@@ -3,6 +3,9 @@
 Crown Clothing ecommerce application. Built alongside Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
 
+## Live Project
+https://crwn-mombo.herokuapp.com/
+
 ## Technologies
 - Redux Thunk + Saga
 - Hooks + Context API
